@@ -1,0 +1,28 @@
+object Frrm_Principal: TFrrm_Principal
+  Left = 857
+  Height = 240
+  Top = 325
+  Width = 320
+  Caption = 'Olá Mundo!'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.2.2.0'
+  object Btn_Ola: TButton
+    Left = 111
+    Height = 25
+    Top = 84
+    Width = 115
+    AutoSize = True
+    Caption = 'Dizer Olá Mundo'
+    OnClick = Btn_OlaClick
+    TabOrder = 0
+  end
+  object Edt_Nome: TEdit
+    Left = 111
+    Height = 23
+    Top = 48
+    Width = 115
+    OnChange = Edt_NomeChange
+    TabOrder = 1
+  end
+end

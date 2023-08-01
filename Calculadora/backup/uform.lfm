@@ -1,0 +1,99 @@
+object Calculadora: TCalculadora
+  Left = 987
+  Height = 188
+  Top = 239
+  Width = 384
+  BorderStyle = bsSingle
+  Caption = 'Calculadora'
+  ClientHeight = 188
+  ClientWidth = 384
+  Color = clWhite
+  DoubleBuffered = True
+  OnCreate = FormCreate
+  ParentDoubleBuffered = False
+  LCLVersion = '2.2.2.0'
+  Scaled = False
+  object Edt_1Num: TEdit
+    Left = 33
+    Height = 23
+    Top = 40
+    Width = 80
+    OnChange = Edt_1NumChange
+    TabOrder = 0
+  end
+  object Edt_2Num: TEdit
+    Left = 32
+    Height = 23
+    Top = 120
+    Width = 80
+    OnChange = Edt_2NumChange
+    TabOrder = 1
+  end
+  object PrimNum: TLabel
+    Left = 33
+    Height = 15
+    Top = 24
+    Width = 137
+    Caption = 'Digite o primeiro número:'
+    ParentColor = False
+    OnClick = PrimNumClick
+  end
+  object SegNum: TLabel
+    Left = 32
+    Height = 15
+    Top = 104
+    Width = 138
+    Caption = 'Digite o segundo número:'
+    ParentColor = False
+    OnClick = SegNumClick
+  end
+  object Divisao: TButton
+    Left = 216
+    Height = 30
+    Top = 128
+    Width = 30
+    Caption = '/'
+    OnClick = DivisaoClick
+    TabOrder = 2
+  end
+  object Soma: TButton
+    Left = 216
+    Height = 30
+    Top = 33
+    Width = 30
+    Caption = '+'
+    OnClick = SomaClick
+    TabOrder = 3
+  end
+  object Subtracao: TButton
+    Left = 216
+    Height = 30
+    Top = 64
+    Width = 30
+    Caption = '-'
+    OnClick = SubtracaoClick
+    TabOrder = 4
+  end
+  object Multiplicacao: TButton
+    Left = 216
+    Height = 30
+    Top = 96
+    Width = 30
+    Caption = '*'
+    OnClick = MultiplicacaoClick
+    TabOrder = 5
+  end
+  object Resultado: TLabel
+    Left = 296
+    Height = 15
+    Top = 80
+    Width = 62
+    Caption = 'RESULTADO'
+    Color = clWhite
+    Font.Color = clRed
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    OnClick = ResultadoClick
+  end
+end
