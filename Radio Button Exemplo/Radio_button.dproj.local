@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023/08/07 21:50:05.625,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/07 21:57:24.943,C:\Users\aluno\Documents\emijao\projetos\Radio Button Exemplo\Radio_button_exemplo.pas=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/07 21:57:24.943,C:\Users\aluno\Documents\emijao\projetos\Radio Button Exemplo\Radio_button_exemplo.dfm=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/08/07 22:10:14.326,C:\Users\aluno\Documents\emijao\projetos\Radio Button Exemplo\Radio_button.dproj=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
