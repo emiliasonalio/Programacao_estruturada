@@ -1,0 +1,50 @@
+object Frm_conversor: TFrm_conversor
+  Left = 283
+  Height = 351
+  Top = 145
+  Width = 445
+  Caption = 'Conversor'
+  ClientHeight = 351
+  ClientWidth = 445
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object Lbl_valor: TLabel
+    Left = 80
+    Height = 20
+    Top = 60
+    Width = 95
+    Caption = 'Valor em Real:'
+    Font.Height = 20
+    ParentColor = False
+    ParentFont = False
+    OnClick = Lbl_valorClick
+  end
+  object Edt_valor: TEdit
+    Left = 200
+    Height = 23
+    Top = 60
+    Width = 100
+    TabOrder = 0
+  end
+  object Tcb_moedas: TComboBox
+    Left = 140
+    Height = 23
+    Top = 120
+    Width = 120
+    ItemHeight = 15
+    Items.Strings = (
+      'Dólar'
+      'Euro'
+      'Ienes'
+    )
+    OnChange = Tcb_moedasChange
+    TabOrder = 1
+  end
+  object Resultado: TLabel
+    Left = 199
+    Height = 1
+    Top = 183
+    Width = 1
+    ParentColor = False
+  end
+end

@@ -1,0 +1,106 @@
+object Form1: TForm1
+  Left = 283
+  Height = 412
+  Top = 145
+  Width = 426
+  Caption = 'Frm_areas'
+  ClientHeight = 412
+  ClientWidth = 426
+  Color = 15000824
+  Font.Color = clBlack
+  LCLVersion = '2.2.2.0'
+  object Rdg_areas: TRadioGroup
+    Left = 20
+    Height = 138
+    Top = 20
+    Width = 380
+    AutoFill = True
+    Caption = 'Selecione o poligno:'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 118
+    ClientWidth = 376
+    Columns = 2
+    Items.Strings = (
+      'Quadrado'
+      'Triângulo'
+      'Paralelogramo'
+      'Retângulo'
+      'Trapézio'
+      'Círculo'
+    )
+    OnClick = Rdg_areasClick
+    TabOrder = 0
+  end
+  object Edt_1: TEdit
+    Left = 180
+    Height = 23
+    Top = 180
+    Width = 160
+    TabOrder = 1
+    Visible = False
+  end
+  object Lbl_1: TLabel
+    Left = 60
+    Height = 20
+    Top = 180
+    Width = 34
+    Caption = 'Lbl_1'
+    Font.Height = 20
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Edt_2: TEdit
+    Left = 180
+    Height = 23
+    Top = 220
+    Width = 160
+    TabOrder = 2
+    Visible = False
+  end
+  object Lbl_2: TLabel
+    Left = 60
+    Height = 20
+    Top = 220
+    Width = 34
+    Caption = 'Lbl_2'
+    Font.Height = 20
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Edt_3: TEdit
+    Left = 180
+    Height = 23
+    Top = 260
+    Width = 160
+    TabOrder = 3
+    Visible = False
+  end
+  object Lbl_3: TLabel
+    Left = 60
+    Height = 20
+    Top = 260
+    Width = 34
+    Caption = 'Lbl_3'
+    Font.Height = 20
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Btn_calcular: TButton
+    Left = 140
+    Height = 25
+    Top = 320
+    Width = 75
+    Caption = 'Calcular'
+    OnClick = Btn_calcularClick
+    TabOrder = 4
+  end
+end

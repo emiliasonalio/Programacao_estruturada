@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="conversorMoeda.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uconversormoeda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Frm_conversor"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uconversorMoeda"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="30"/>
+        <CursorPos X="75" Y="68"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="14">
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="36" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="41" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="42" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="43" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="39" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="51" Column="19" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="48" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="62" Column="27" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="59" Column="27" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="60" Column="30" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="67" Column="73" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="68" Column="73" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="67" Column="3" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="uconversormoeda.pas"/>
+        <Caret Line="68" Column="63" TopLine="29"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
