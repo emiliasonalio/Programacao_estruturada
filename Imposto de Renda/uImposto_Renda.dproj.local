@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/08/07 22:13:00.000.429,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 19:19:19.767,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 19:29:19.496,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\Imposto de Renda\Imposto_Renda.pas=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 19:29:19.496,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\Imposto de Renda\Imposto_Renda.dfm=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/09/12 19:29:29.295,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\Imposto de Renda\uImposto_Renda.dproj=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

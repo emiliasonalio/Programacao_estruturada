@@ -1,0 +1,86 @@
+unit Imposto_Renda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    TEdit_Salario: TEdit;
+    Lbl_Salario: TLabel;
+    Rg_Dependentes: TRadioGroup;
+    Btn_Calcular: TButton;
+    Lbl_Imposto: TLabel;
+    procedure Btn_CalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  salario : double;
+
+implementation
+
+{$R *.dfm}
+
+procedure impostoRenda (salario : double);
+var
+  imposto : double;
+  impostoFinal : double;
+
+     begin
+      if (Form1.Rg_Dependentes.ItemIndex = 1) then
+        begin
+          imposto := salario - 100;
+        end;
+
+      if (Form1.Rg_Dependentes.ItemIndex = 2) then
+        begin
+          imposto := salario - 150;
+        end;
+
+      if (Form1.Rg_Dependentes.ItemIndex = 3) then
+        begin
+          imposto := salario - 180;
+        end;
+
+      if (Form1.Rg_Dependentes.ItemIndex <= 4) then
+        begin
+          imposto := salario - 200;
+        end;
+
+
+      if (salario < 2000 ) then
+        begin
+          Form1.Lbl_Imposto.Caption := 'Insento';
+        end;
+
+      if (salario > 2999.99 and salario > 2000) then
+        begin
+          impostoFinal := imposto * 0.85;
+        end;
+
+      if (salario > 3000 and salario < 3999.99) then
+        begin
+          impostoFinal := imposto * 0.8;
+        end;
+
+        if (salario > 4000) then
+        begin
+          impostoFinal := imposto * 0.75;
+        end;
+
+     end;
+
+procedure TForm1.Btn_CalcularClick(Sender: TObject);
+begin
+  salario =: SrtToFloat(TEdit_Salario);
+  impostoRenda(salario);
+end;
+
+end.
