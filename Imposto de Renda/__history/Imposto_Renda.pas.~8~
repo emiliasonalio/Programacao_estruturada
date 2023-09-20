@@ -1,0 +1,110 @@
+unit Imposto_Renda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFrm_Um = class(TForm)
+    TEdit_Salario: TEdit;
+    Lbl_Salario: TLabel;
+    Rg_Dependentes: TRadioGroup;
+    Btn_Calcular: TButton;
+    Lbl_Imposto: TLabel;
+    Btn_Salvar: TButton;
+    Lbl_Resultado: TLabel;
+    procedure Btn_CalcularClick(Sender: TObject);
+    procedure Rg_DependentesClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Um: TFrm_Um;
+
+
+implementation
+
+{$R *.dfm}
+
+procedure impostoRenda (salario : double);
+var
+  imposto : double;
+  impostoFinal : double;
+
+     begin
+
+      imposto := salario;
+
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 0) then
+        begin
+           imposto := salario;
+        end;
+
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 1) then
+        begin
+          imposto := salario - 100;
+        end;
+
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 2) then
+        begin
+          imposto := salario - 150;
+        end;
+
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 3) then
+        begin
+          imposto := salario - 180;
+        end;
+
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 4) then
+        begin
+          imposto := salario - 200;
+        end;
+
+
+      if (salario < 2000 ) then
+        begin
+          Frm_Um.Lbl_Imposto.Caption := 'Insento';
+          impostoFinal:=0;
+        end;
+
+      if (salario < 2999.99) and (salario >= 2000) then
+        begin
+          impostoFinal := imposto * 0.15;
+        end;
+
+      if (salario >= 3000) and (salario < 3999.99) then
+        begin
+          impostoFinal := imposto * 0.2;
+        end;
+
+        if (salario > 4000) then
+        begin
+          impostoFinal := imposto * 0.25;
+        end;
+
+      Frm_Um.Lbl_Resultado.Caption := FloatToStr(impostoFinal);
+
+     end;
+
+procedure TFrm_Um.Btn_CalcularClick(Sender: TObject);
+var
+ salario : double;
+begin
+  salario := StrToFloat(TEdit_Salario.Text);
+  impostoRenda(salario);
+end;
+
+procedure TFrm_Um.Rg_DependentesClick(Sender: TObject);
+var
+ salario : double;
+begin
+  salario := StrToFloat(TEdit_Salario.Text);
+  impostoRenda(salario);
+end;
+
+end.

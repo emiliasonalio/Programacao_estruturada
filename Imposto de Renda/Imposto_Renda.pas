@@ -7,14 +7,17 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TForm1 = class(TForm)
+  TFrm_Um = class(TForm)
     TEdit_Salario: TEdit;
     Lbl_Salario: TLabel;
     Rg_Dependentes: TRadioGroup;
     Btn_Calcular: TButton;
     Lbl_Imposto: TLabel;
+    Btn_Salvar: TButton;
+    Lbl_Resultado: TLabel;
     procedure Btn_CalcularClick(Sender: TObject);
     procedure Rg_DependentesClick(Sender: TObject);
+    procedure Btn_SalvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -22,12 +25,14 @@ type
   end;
 
 var
-  Form1: TForm1;
+  Frm_Um: TFrm_Um;
 
 
 implementation
 
 {$R *.dfm}
+
+uses Unit2;
 
 procedure impostoRenda (salario : double);
 var
@@ -38,27 +43,27 @@ var
 
       imposto := salario;
 
-      if (Form1.Rg_Dependentes.ItemIndex = 0) then
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 0) then
         begin
            imposto := salario;
         end;
 
-      if (Form1.Rg_Dependentes.ItemIndex = 1) then
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 1) then
         begin
           imposto := salario - 100;
         end;
 
-      if (Form1.Rg_Dependentes.ItemIndex = 2) then
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 2) then
         begin
           imposto := salario - 150;
         end;
 
-      if (Form1.Rg_Dependentes.ItemIndex = 3) then
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 3) then
         begin
           imposto := salario - 180;
         end;
 
-      if (Form1.Rg_Dependentes.ItemIndex = 4) then
+      if (Frm_Um.Rg_Dependentes.ItemIndex = 4) then
         begin
           imposto := salario - 200;
         end;
@@ -66,7 +71,7 @@ var
 
       if (salario < 2000 ) then
         begin
-          Form1.Lbl_Imposto.Caption := 'Insento';
+          Frm_Um.Lbl_Imposto.Caption := 'Insento';
           impostoFinal:=0;
         end;
 
@@ -85,11 +90,11 @@ var
           impostoFinal := imposto * 0.25;
         end;
 
-     Form1.Lbl_Imposto.Caption := 'Imposto Devido ' + FloatToStr(impostoFinal);
+     Frm_Um.Lbl_Resultado.Caption := FloatToStr(impostoFinal);
 
      end;
 
-procedure TForm1.Btn_CalcularClick(Sender: TObject);
+procedure TFrm_Um.Btn_CalcularClick(Sender: TObject);
 var
  salario : double;
 begin
@@ -97,7 +102,12 @@ begin
   impostoRenda(salario);
 end;
 
-procedure TForm1.Rg_DependentesClick(Sender: TObject);
+procedure TFrm_Um.Btn_SalvarClick(Sender: TObject);
+begin
+ Frm_Dois.AdicionarImposto (Frm_Um.Lbl_Resultado.Caption);
+end;
+
+procedure TFrm_Um.Rg_DependentesClick(Sender: TObject);
 var
  salario : double;
 begin
