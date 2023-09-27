@@ -1,0 +1,101 @@
+unit Avalicao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    Trg_selecionar: TRadioGroup;
+    Edt_numInicial: TEdit;
+    Lbl_TextoInicial: TLabel;
+    Lbl_numFinal: TLabel;
+    Edt_numFinal: TEdit;
+    Btn_Resultado: TButton;
+    Edt_quantNum: TEdit;
+    Lbl_impares: TLabel;
+    Lbl_pares: TLabel;
+    Ltb_1: TListBox;
+    Ltb_2: TListBox;
+    Lbl_quantNum: TLabel;
+    procedure Trg_selecionarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Trg_selecionarClick(Sender: TObject);
+begin
+
+  Edt_numInicial.Visible := False;
+  Lbl_TextoInicial.Visible := False;
+  Lbl_numFinal.Visible := False;
+  Edt_numFinal.Visible := False;
+  Btn_Resultado.Visible := False;
+  Edt_quantNum.Visible := False;
+  Lbl_impares.Visible := False;
+  Lbl_pares.Visible := False;
+  Ltb_1.Visible := False;
+  Ltb_2.Visible := False;
+  Lbl_quantNum.Visible := False;
+
+  if (Trg_selecionar.ItemIndex = 0) then
+  begin
+  Edt_numInicial.Visible := Visible;
+  Lbl_TextoInicial.Visible := Visible;
+  Lbl_numFinal.Visible := Visible;
+  Edt_numFinal.Visible := Visible;
+  Btn_Resultado.Visible := Visible;
+  Edt_quantNum.Visible := False;
+  Lbl_impares.Visible := Visible;
+  Lbl_pares.Visible := False;
+  Ltb_1.Visible := Visible;
+  Ltb_2.Visible := False;
+  Lbl_quantNum.Visible := False;
+  end;
+
+  if (Trg_selecionar.ItemIndex = 1) then
+  begin
+  Edt_numInicial.Visible := Visible;
+  Lbl_TextoInicial.Visible := Visible;
+  Lbl_numFinal.Visible := Visible;
+  Edt_numFinal.Visible := Visible;
+  Btn_Resultado.Visible := Visible;
+  Edt_quantNum.Visible := False;
+  Lbl_impares.Visible := Visible;
+  Lbl_pares.Visible := Visible;
+  Ltb_1.Visible := Visible;
+  Ltb_2.Visible := Visible;
+  Lbl_quantNum.Visible := False;
+  end;
+
+  if (Trg_selecionar.ItemIndex = 2) then
+  begin
+  Edt_numInicial.Visible := Visible;
+  Lbl_TextoInicial.Visible := Visible;
+  Lbl_numFinal.Visible := Visible;
+  Edt_numFinal.Visible := Visible;
+  Btn_Resultado.Visible := Visible;
+  Edt_quantNum.Visible := Visible;
+  Lbl_impares.Visible := Visible;
+  Lbl_pares.Visible := False;
+  Ltb_1.Visible := Visible;
+  Ltb_2.Visible := False;
+  Lbl_quantNum.Visible := Visible;
+  end;
+
+
+
+end;
+
+end.
