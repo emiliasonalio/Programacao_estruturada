@@ -1,0 +1,220 @@
+unit Avalicao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    Trg_selecionar: TRadioGroup;
+    Edt_numInicial: TEdit;
+    Lbl_TextoInicial: TLabel;
+    Lbl_numFinal: TLabel;
+    Edt_numFinal: TEdit;
+    Btn_Resultado: TButton;
+    Edt_quantNum: TEdit;
+    Lbl_impares: TLabel;
+    Lbl_pares: TLabel;
+    Ltb_1: TListBox;
+    Ltb_2: TListBox;
+    Lbl_quantNum: TLabel;
+    procedure Trg_selecionarClick(Sender: TObject);
+    procedure Btn_ResultadoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure FizzBuzz (numInicial : integer; numFinal : integer);
+var n1, n2 : integer;
+begin
+  n1 := numInicial;
+  n2 := numFinal;
+
+  while (n1 < n2) do
+  begin
+
+    Form1.Ltb_1.Items.Add(IntToStr(n1));
+
+    if (n1 mod 3 = 0) then
+    begin
+
+      Form1.Ltb_1.Items.Add('Fizz');
+
+    end;
+
+    if (n1 mod 5 = 0) then
+    begin
+      Form1.Ltb_1.Items.Add('Buzz');
+    end;
+
+    if (n1 mod 3 = 0) and (n1 mod 5 = 0) then
+    begin
+      Form1.Ltb_1.Items.Add('FizzBuzz');
+    end;
+
+    n1 := n1 + 1;
+  end;
+end;
+
+procedure ParOuImpar (numInicial : integer; numFinal : integer);
+var
+  n1, n2 : integer;
+  begin
+    n1 := numInicial;
+    n2 := numFinal;
+
+    while(n1 < n2) do
+    begin
+
+    if (n1 mod 2 = 0) then
+    begin
+      Form1.Ltb_2.Items.Add(IntToStr(n1));
+    end;
+    if (n1 mod 2 <> 0) then
+      Form1.Ltb_1.Items.Add(IntToStr(n1));
+
+
+      n1 := n1 + 1;
+    end;
+
+  end;
+
+procedure Fibonacci (num1 : integer; num2 : integer);
+var
+  n1, n2, resultado, quant, cont : integer;
+
+  begin
+    n1 := StrToInt(Form1.Edt_numInicial.text);
+    n2 := StrToInt(Form1.Edt_numFinal.text);
+    quant := StrToInt(Form1.Edt_quantNum.text);
+    cont := 0;
+
+    if (n1 < 0) then
+    begin
+      ShowMessage('Numero invalido');
+    end;
+
+    if (n1 > 0) and (n2 > 0) then
+    begin
+
+      while cont < quant do
+      begin
+        resultado := n1 + n2;
+        Form1.Ltb_1.Items.Add(IntToStr(resultado));
+
+        n1 := n2;
+        n2 := resultado;
+
+        cont := cont + 1;
+      end;
+
+    end;
+
+  end;
+
+
+
+
+procedure TForm1.Btn_ResultadoClick(Sender: TObject);
+var
+   num1, num2 : Integer;
+begin
+
+  num1 := StrToInt(Edt_numInicial.Text);
+  num2 := StrToInt(Edt_numFinal.Text);
+
+  if (Trg_selecionar.ItemIndex = 0) then
+  begin
+    FizzBuzz(num1, num2);
+  end;
+
+  if (Trg_selecionar.ItemIndex = 1) then
+  begin
+    ParOuImpar(num1, num2);
+  end;
+
+  if (Trg_selecionar.ItemIndex = 2) then
+  begin
+    Fibonacci(num1, num2);
+  end;
+
+
+end;
+
+procedure TForm1.Trg_selecionarClick(Sender: TObject);
+begin
+
+  Edt_numInicial.Visible := False;
+  Lbl_TextoInicial.Visible := False;
+  Lbl_numFinal.Visible := False;
+  Edt_numFinal.Visible := False;
+  Btn_Resultado.Visible := False;
+  Edt_quantNum.Visible := False;
+  Lbl_impares.Visible := False;
+  Lbl_pares.Visible := False;
+  Ltb_1.Visible := False;
+  Ltb_2.Visible := False;
+  Lbl_quantNum.Visible := False;
+
+  if (Trg_selecionar.ItemIndex = 0) then
+  begin
+  Edt_numInicial.Visible := Visible;
+  Lbl_TextoInicial.Visible := Visible;
+  Lbl_numFinal.Visible := Visible;
+  Edt_numFinal.Visible := Visible;
+  Btn_Resultado.Visible := Visible;
+  Edt_quantNum.Visible := False;
+  Lbl_impares.Visible := False;
+  Lbl_pares.Visible := False;
+  Ltb_1.Visible := Visible;
+  Ltb_2.Visible := False;
+  Lbl_quantNum.Visible := False;
+  Ltb_1.Items.Clear();
+  end;
+
+  if (Trg_selecionar.ItemIndex = 1) then
+  begin
+  Edt_numInicial.Visible := Visible;
+  Lbl_TextoInicial.Visible := Visible;
+  Lbl_numFinal.Visible := Visible;
+  Edt_numFinal.Visible := Visible;
+  Btn_Resultado.Visible := Visible;
+  Edt_quantNum.Visible := False;
+  Lbl_impares.Visible := Visible;
+  Lbl_pares.Visible := Visible;
+  Ltb_1.Visible := Visible;
+  Ltb_2.Visible := Visible;
+  Lbl_quantNum.Visible := False;
+  Ltb_1.Items.Clear();
+  end;
+
+  if (Trg_selecionar.ItemIndex = 2) then
+  begin
+  Edt_numInicial.Visible := Visible;
+  Lbl_TextoInicial.Visible := Visible;
+  Lbl_numFinal.Visible := Visible;
+  Edt_numFinal.Visible := Visible;
+  Btn_Resultado.Visible := Visible;
+  Edt_quantNum.Visible := Visible;
+  Lbl_impares.Visible := Visible;
+  Lbl_pares.Visible := False;
+  Ltb_1.Visible := Visible;
+  Ltb_2.Visible := False;
+  Lbl_quantNum.Visible := Visible;
+  Ltb_1.Items.Clear();
+  end;
+
+end;
+
+end.

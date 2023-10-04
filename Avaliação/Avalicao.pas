@@ -43,9 +43,6 @@ begin
 
   while (n1 < n2) do
   begin
-
-    Form1.Ltb_1.Items.Add(IntToStr(n1));
-
     if (n1 mod 3 = 0) then
     begin
 
@@ -61,6 +58,10 @@ begin
     if (n1 mod 3 = 0) and (n1 mod 5 = 0) then
     begin
       Form1.Ltb_1.Items.Add('FizzBuzz');
+    end
+    else if (n1 mod 3 > 0) and (n1 mod 5 > 0) then
+    begin
+      Form1.Ltb_1.Items.Add(IntToStr(n1));
     end;
 
     n1 := n1 + 1;
@@ -74,17 +75,17 @@ var
     n1 := numInicial;
     n2 := numFinal;
 
-    while(n1 < n2) do
+    while(n1 <= n2) do
     begin
 
     if (n1 mod 2 = 0) then
     begin
+
       Form1.Ltb_2.Items.Add(IntToStr(n1));
     end;
     if (n1 mod 2 <> 0) then
+
       Form1.Ltb_1.Items.Add(IntToStr(n1));
-
-
       n1 := n1 + 1;
     end;
 
@@ -111,7 +112,7 @@ var
       while cont < quant do
       begin
         resultado := n1 + n2;
-        Form1.Ltb_1.Items.Add(IntToStr(resultado));
+        Form1.Ltb_1.Items.Add(IntToStr(n1));
 
         n1 := n2;
         n2 := resultado;

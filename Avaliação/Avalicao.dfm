@@ -17,6 +17,7 @@ object Form1: TForm1
     Width = 81
     Height = 15
     Caption = 'N'#250'mero inicial:'
+    Visible = False
   end
   object Lbl_numFinal: TLabel
     Left = 400
@@ -24,6 +25,7 @@ object Form1: TForm1
     Width = 73
     Height = 15
     Caption = 'N'#250'mero final:'
+    Visible = False
   end
   object Lbl_impares: TLabel
     Left = 216
@@ -31,6 +33,7 @@ object Form1: TForm1
     Width = 97
     Height = 15
     Caption = 'N'#250'meros '#205'mpares:'
+    Visible = False
   end
   object Lbl_pares: TLabel
     Left = 400
@@ -38,6 +41,7 @@ object Form1: TForm1
     Width = 83
     Height = 15
     Caption = 'N'#250'meros Pares:'
+    Visible = False
   end
   object Lbl_quantNum: TLabel
     Left = 400
@@ -45,6 +49,7 @@ object Form1: TForm1
     Width = 100
     Height = 15
     Caption = 'Quantos n'#250'meros?'
+    Visible = False
   end
   object Trg_selecionar: TRadioGroup
     Left = 16
@@ -65,6 +70,7 @@ object Form1: TForm1
     Width = 121
     Height = 23
     TabOrder = 1
+    Visible = False
   end
   object Edt_numFinal: TEdit
     Left = 400
@@ -72,6 +78,7 @@ object Form1: TForm1
     Width = 121
     Height = 23
     TabOrder = 2
+    Visible = False
   end
   object Btn_Resultado: TButton
     Left = 216
@@ -80,6 +87,7 @@ object Form1: TForm1
     Height = 25
     Caption = 'Gerar Resultado'
     TabOrder = 3
+    Visible = False
     OnClick = Btn_ResultadoClick
   end
   object Edt_quantNum: TEdit
@@ -88,6 +96,7 @@ object Form1: TForm1
     Width = 121
     Height = 23
     TabOrder = 4
+    Visible = False
   end
   object Ltb_1: TListBox
     Left = 216
@@ -96,6 +105,7 @@ object Form1: TForm1
     Height = 233
     ItemHeight = 15
     TabOrder = 5
+    Visible = False
   end
   object Ltb_2: TListBox
     Left = 400
@@ -104,5 +114,6 @@ object Form1: TForm1
     Height = 233
     ItemHeight = 15
     TabOrder = 6
+    Visible = False
   end
 end
