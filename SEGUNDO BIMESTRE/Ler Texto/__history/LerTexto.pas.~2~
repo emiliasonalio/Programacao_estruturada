@@ -1,0 +1,46 @@
+unit LerTexto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TFrm_LerTexto = class(TForm)
+    Ler: TButton;
+    procedure LerClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_LerTexto: TFrm_LerTexto;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrm_LerTexto.LerClick(Sender: TObject);
+var
+  arquivo : TextFile;
+  conteudo_da_linha : String;
+
+begin
+
+  AssignFile(arquivo, 'Dias.txt');
+  Reset(arquivo);
+
+    while not EOF(arquivo) do
+    begin
+      Readln(arquivo, conteudo_da_linha);
+      ShowMessage(conteudo_da_linha);
+    end;
+
+    ClosedFile(arquivo);
+
+end;
+
+end.
