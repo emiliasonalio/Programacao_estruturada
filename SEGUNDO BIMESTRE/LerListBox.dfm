@@ -26,5 +26,6 @@ object Frm_List: TFrm_List
     Height = 25
     Caption = 'Ler arquivo'
     TabOrder = 1
+    OnClick = Btn_LerClick
   end
 end

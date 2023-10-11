@@ -10,6 +10,7 @@ type
   TFrm_List = class(TForm)
     Ltb_LerList: TListBox;
     Btn_Ler: TButton;
+    procedure Btn_LerClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -22,5 +23,25 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrm_List.Btn_LerClick(Sender: TObject);
+var
+  arquivo : TextFile;
+  conteudo : String;
+
+begin
+
+  AssignFile(arquivo, 'Ler.txt');
+  Reset(arquivo);
+
+  while not EOF(arquivo) do
+  begin
+    Readln(arquivo, conteudo);
+    Frm_List.Ltb_LerList.Items.Add(conteudo);
+  end;
+
+  CloseFile(arquivo);
+
+end;
 
 end.
