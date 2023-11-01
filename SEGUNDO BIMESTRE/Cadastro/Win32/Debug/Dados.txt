@@ -1,0 +1,3 @@
+ID|NOME|TELEFONE|NASCIMENTO|
+1|"Emilia M Sonalio"|"42 98802-0747"|1994-10-25|
+2|"João Gabriel M Sonalio"|"42 99994-5270"|2004-12-15|
