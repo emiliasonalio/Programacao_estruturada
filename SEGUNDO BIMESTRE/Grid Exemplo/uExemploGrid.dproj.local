@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/08/07 22:13:00.000.429,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 21:40:04.000.246,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 19:53:51.000.909,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 19:54:05.921,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 19:54:26.987,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Grid Exemplo\ExemploGrid.pas=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 19:54:26.987,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Grid Exemplo\ExemploGrid.dfm=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/10/31 19:54:32.855,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Grid Exemplo\uExemploGrid.dproj=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
