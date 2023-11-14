@@ -1,0 +1,150 @@
+unit uFrm_Cadastro_Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids;
+
+type
+  TFrm_Cadastro_Principal = class(TForm)
+    LbL_nome_livro: TLabel;
+    Lbl_autor: TLabel;
+    Edt_autor: TEdit;
+    Edt_nome_livro: TEdit;
+    Lbl_editora: TLabel;
+    Edt_editora: TEdit;
+    Grd_Produtos: TStringGrid;
+    Btn_Salvar: TButton;
+    Btn_Editar: TButton;
+    Btn_excluir: TButton;
+    Btn_incluir: TButton;
+    Btn_cancelar: TButton;
+    Label1: TLabel;
+    Edt_ano: TEdit;
+    Label2: TLabel;
+    Edt_edicao: TEdit;
+    procedure HabilitarDesabilitar();
+    procedure LimparCampos();
+    procedure GravarArquivo();
+    procedure Btn_incluirClick(Sender: TObject);
+    procedure Btn_SalvarClick(Sender: TObject);
+    procedure Btn_cancelarClick(Sender: TObject);
+    procedure Btn_excluirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Cadastro_Principal: TFrm_Cadastro_Principal;
+  inclusao : Boolean;
+
+implementation
+
+{$R *.dfm}
+
+
+
+{ TCadastro_Principal }
+
+procedure TFrm_Cadastro_Principal.Btn_cancelarClick(Sender: TObject);
+begin
+  HabilitarDesabilitar();
+  LimparCampos();
+end;
+
+procedure TFrm_Cadastro_Principal.Btn_excluirClick(Sender: TObject);
+var
+  i, j : Integer;
+
+begin
+  if Grd_Produtos.Row <> 0 then
+    if MessageDlg('Deseja realmente excluir o registro?', mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrYes then
+    begin
+      for i := Grd_Produtos.Row to Grd_Produtos.RowCount - 1 do
+      begin
+        for j := 1 to 7 do
+          Grd_Produtos.Cells[j, i] := Grd_Produtos.Cells[j, i+1];
+      end;
+      Grd_Produtos.RowCount := Grd_Produtos.RowCount - 1;
+      GravarArquivo();
+    end;
+end;
+
+procedure TFrm_Cadastro_Principal.Btn_incluirClick(Sender: TObject);
+begin
+  inclusao := True;
+  HabilitarDesabilitar();
+end;
+
+procedure TFrm_Cadastro_Principal.Btn_SalvarClick(Sender: TObject);
+var
+  linha : integer;
+begin
+  if inclusao = True then
+  begin
+    linha := Grd_Produtos.RowCount;
+    Grd_Produtos.RowCount := Grd_Produtos.RowCount + 1;
+  end;
+
+    linha := Grd_Produtos.Row;
+
+  Grd_Produtos.Rows[linha][1] := Edt_autor.Text;
+  Grd_Produtos.Rows[linha][2] := Edt_nome_livro.Text;
+  Grd_Produtos.Rows[linha][3] := Edt_editora.Text;
+  Grd_Produtos.Rows[linha][4] := Edt_ano.Text;
+  Grd_Produtos.Rows[linha][5] := Edt_edicao.Text;
+  GravarArquivo();
+  HabilitarDesabilitar();
+  LimparCampos();
+
+end;
+
+procedure TFrm_Cadastro_Principal.HabilitarDesabilitar;
+begin
+  Btn_Salvar.Enabled := Not(Btn_Salvar.Enabled);
+  Btn_Editar.Enabled := Not(Btn_Editar.Enabled);
+  Btn_excluir.Enabled := Not(Btn_excluir.Enabled);
+  Btn_incluir.Enabled := Not(Btn_incluir.Enabled);
+  Btn_cancelar.Enabled := Not(Btn_cancelar.Enabled);
+
+  Edt_autor.Enabled := Not(Edt_autor.Enabled);
+  Edt_nome_livro.Enabled := Not(Edt_nome_livro.Enabled);
+  Edt_editora.Enabled := Not(Edt_editora.Enabled);
+  Edt_ano.Enabled := Not(Edt_ano.Enabled);
+  Edt_edicao.Enabled := Not(Edt_edicao.Enabled);
+
+end;
+
+procedure TFrm_Cadastro_Principal.LimparCampos;
+begin
+  Edt_autor.Text := '';
+  Edt_nome_livro.Text := '';
+  Edt_editora.Text := '';
+  Edt_ano.Text := '';
+  Edt_edicao.Text := '';
+
+end;
+
+procedure TFrm_Cadastro_Principal.GravarArquivo;
+var
+  arquivo : TextFile;
+  registro : String;
+  I: Integer;
+begin
+  AssignFile(arquivo, 'Livros.txt');
+  Rewrite(arquivo);
+  for I := 1 to Grd_Produtos.RowCount - 1 do
+  begin
+    registro := Grd_Produtos.Rows[I][1] + '|' + Grd_Produtos.Rows[I][2] + '|' + Grd_Produtos.Rows[I][3] + '|' + Grd_Produtos.Rows[I][4] + '|';
+    registro := registro + Grd_Produtos.Rows[I][5] + '|' + Grd_Produtos.Rows[I][6] + '|' + Grd_Produtos.Rows[I][7];
+    Writeln(arquivo, registro);
+  end;
+  CloseFile(arquivo);
+
+
+end;
+
+end.

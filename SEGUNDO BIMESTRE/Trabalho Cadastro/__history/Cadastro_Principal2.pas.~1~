@@ -1,0 +1,34 @@
+unit Cadastro_Principal2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids;
+
+type
+  TCadastro_Principal = class(TForm)
+    LbL_nome_livro: TLabel;
+    Lbl_autor: TLabel;
+    Edt_autor: TEdit;
+    Edt_nome_livro: TEdit;
+    Lbl_editora: TLabel;
+    Edt_editora: TEdit;
+    StringGrid1: TStringGrid;
+    Btn_Salvar: TButton;
+    Btn_Editar: TButton;
+    Btn_excluir: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Cadastro_Principal: TCadastro_Principal;
+
+implementation
+
+{$R *.dfm}
+
+end.
