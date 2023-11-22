@@ -1,0 +1,49 @@
+unit Bloco_de_notas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls;
+
+type
+  TFrm_Bloco_de_notas = class(TForm)
+    MainMenu1: TMainMenu;
+    Arquivo: TMenuItem;
+    Novo1: TMenuItem;
+    Abrir1: TMenuItem;
+    Salvar1: TMenuItem;
+    Sair1: TMenuItem;
+    TMemo: TMemo;
+    OpenDialog1: TOpenDialog;
+    procedure Novo1Click(Sender: TObject);
+    procedure Abrir1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Bloco_de_notas: TFrm_Bloco_de_notas;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrm_Bloco_de_notas.Abrir1Click(Sender: TObject);
+
+//OpenDialog1 : TOpenDialog;
+
+begin
+  OpenDialog1.Execute;
+  if OpenDialog1.Execute then
+    TMemo.Lines.LoadFromFile(OpenDialog1.FileName);
+end;
+
+procedure TFrm_Bloco_de_notas.Novo1Click(Sender: TObject);
+begin
+  TMemo.Text := '';
+end;
+
+end.

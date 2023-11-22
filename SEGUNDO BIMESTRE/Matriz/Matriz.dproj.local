@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/08/07 22:13:00.000.429,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 21:40:04.000.246,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 19:53:51.000.909,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/21 19:59:16.000.838,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/21 20:03:30.000.637,C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Exercício 21.11\Exercicio_Grid.pas</Transaction>
+    <Transaction>2023/11/21 20:03:30.000.637,C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Exercício 21.11\Exercicio_Grid.dfm</Transaction>
+    <Transaction>2023/11/21 20:03:37.000.144,C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Exercício 21.11\uExercicio_Grid.dproj</Transaction>
+    <Transaction>2023/11/21 20:36:07.000.050,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Exercício 21.11\uExercicio_Grid.dproj=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Matriz\Matriz.dproj</Transaction>
+    <Transaction>2023/11/21 20:36:17.000.151,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Matriz\Matriz.dproj=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Matriz\Matriz.dproj</Transaction>
+    <Transaction>2023/11/21 20:40:35.000.334,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Matriz\Matriz.dproj=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Matriz\Matriz.dproj</Transaction>
+    <Transaction>2023/11/21 20:45:18.000.628,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Exercício 21.11\Exercicio_Grid.pas=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Matriz\Exercicio_Grid.pas</Transaction>
+    <Transaction>2023/11/21 20:45:18.000.628,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Exercício 21.11\Exercicio_Grid.dfm=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Matriz\Exercicio_Grid.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

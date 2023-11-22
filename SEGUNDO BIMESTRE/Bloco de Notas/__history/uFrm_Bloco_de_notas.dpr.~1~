@@ -1,0 +1,14 @@
+program uFrm_Bloco_de_notas;
+
+uses
+  Vcl.Forms,
+  Bloco_de_notas in 'Bloco_de_notas.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
