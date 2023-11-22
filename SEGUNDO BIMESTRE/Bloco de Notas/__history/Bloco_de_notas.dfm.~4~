@@ -49,7 +49,7 @@ object Frm_Bloco_de_notas: TFrm_Bloco_de_notas
     Top = 88
   end
   object SaveTextFileDialog1: TSaveTextFileDialog
-    DefaultExt = '.txt'
+    DefaultExt = 'txt'
     Left = 264
     Top = 48
   end
