@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/08/07 22:13:00.000.429,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 21:40:04.000.246,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 19:53:51.000.909,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/28 20:08:43.810,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/28 20:09:41.093,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Frm_Cadastro.dfm=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/11/28 20:09:41.093,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Frm_Cadastro.pas=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/28 20:09:55.691,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Prj_Cadastro.dproj=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/11/28 21:08:26.037,=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit1.pas</Transaction>
+    <Transaction>2023/11/28 21:46:29.738,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\uDM_cadastro_livros.pas=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit1.pas</Transaction>
+    <Transaction>2023/11/28 21:46:29.738,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\uDM_cadastro_livros.dfm=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit1.dfm</Transaction>
+    <Transaction>2023/11/28 21:47:58.963,=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit2.pas</Transaction>
+    <Transaction>2023/11/28 21:50:36.458,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Frm_Inclusao.dfm=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit2.dfm</Transaction>
+    <Transaction>2023/11/28 21:50:36.458,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Frm_Inclusao.pas=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit2.pas</Transaction>
+    <Transaction>2023/11/28 22:12:38.632,=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit2.pas</Transaction>
+    <Transaction>2023/11/28 22:17:23.774,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Frm_Cadastro_Editora.pas=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit2.pas</Transaction>
+    <Transaction>2023/11/28 22:17:23.774,C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Frm_Cadastro_Editora.dfm=C:\Users\aluno\Documents\GitHub\GitHub\Programacao_estruturada\SEGUNDO BIMESTRE\Cadastro livros\Unit2.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
