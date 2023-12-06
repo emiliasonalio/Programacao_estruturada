@@ -15,6 +15,15 @@ type
     Tabela_Livros: TFDTable;
     Tabela_Editora: TFDTable;
     Tabela_Clientes: TFDTable;
+    Tabela_LivrosID_LIVROS: TSmallintField;
+    Tabela_LivrosNOME: TStringField;
+    Tabela_LivrosAUTOR: TStringField;
+    Tabela_EditoraID_EDITORA: TSmallintField;
+    Tabela_EditoraNOME: TStringField;
+    Tabela_ClientesID_CLIENTE: TSmallintField;
+    Tabela_ClientesNOME: TStringField;
+    Tabela_EditoraCIDADE: TStringField;
+    Tabela_ClientesTELEFONE: TSmallintField;
   private
     { Private declarations }
   public
@@ -28,7 +37,7 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
-uses Frm_Cadastro;
+uses Frm_Cadastro_editora, Frm_Menu, Frm_Cadastro_livros;
 
 {$R *.dfm}
 

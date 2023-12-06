@@ -1,0 +1,87 @@
+unit Frm_Cadastro_livros;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls;
+
+type
+  TFrm_Cad = class(TForm)
+    DGrid_Livros: TDBGrid;
+    Ds_livros: TDataSource;
+    Btn_incluir: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    DB_codigo: TDBEdit;
+    DB_nome: TDBEdit;
+    DB_autor: TDBEdit;
+    Btn_Salvar: TButton;
+    Btn_cancelar: TButton;
+    Btn_Excluir: TButton;
+    Btn_Editar: TButton;
+    procedure Btn_incluirClick(Sender: TObject);
+    procedure Btn_ExcluirClick(Sender: TObject);
+    procedure Btn_SalvarClick(Sender: TObject);
+    procedure Btn_EditarClick(Sender: TObject);
+    procedure Btn_cancelarClick(Sender: TObject);
+    procedure HabilitarDesabilitar();
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Cad: TFrm_Cad;
+
+implementation
+
+{$R *.dfm}
+
+uses uDM_cadastro_livros, Frm_Inclusao;
+
+procedure TFrm_Cad.Btn_incluirClick(Sender: TObject);
+begin
+  uDM_Cadastro.Tabela_Livros.Append;
+  HabilitarDesabilitar();
+end;
+
+procedure TFrm_Cad.Btn_cancelarClick(Sender: TObject);
+begin
+ uDm_Cadastro.Tabela_Livros.Cancel;
+ HabilitarDesabilitar();
+end;
+
+procedure TFrm_Cad.HabilitarDesabilitar;
+begin
+  Btn_salvar.Enabled := Not(Btn_salvar.Enabled);
+  Btn_cancelar.Enabled := Not(Btn_cancelar.Enabled);
+  DB_autor.Enabled := Not(DB_autor.Enabled);
+  DB_codigo.Enabled := Not(DB_codigo.Enabled);
+  DB_nome.Enabled := Not(DB_nome.Enabled);
+end;
+
+procedure TFrm_Cad.Btn_SalvarClick(Sender: TObject);
+begin
+  uDM_Cadastro.Tabela_Livros.post;
+  HabilitarDesabilitar();
+
+end;
+
+procedure TFrm_Cad.Btn_EditarClick(Sender: TObject);
+begin
+  uDM_Cadastro.Tabela_Livros.Edit;
+  HabilitarDesabilitar();
+end;
+
+procedure TFrm_Cad.Btn_ExcluirClick(Sender: TObject);
+begin
+  if MessageDlg('Deseja realmente excluir o registro?', mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrYes then
+  uDM_Cadastro.Tabela_Livros.Delete;
+
+end;
+
+end.
